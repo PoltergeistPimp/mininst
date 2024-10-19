@@ -35,7 +35,6 @@ echo "###################"
 echo "# X11 xserver etc.#"
 echo "###################"
 
-quit
 
 sudo apt install xserver-xorg-core xserver-xorg-video-intel xinit xinput x11-xserver-utils 2> ~/x11_err.txt
 
@@ -45,18 +44,12 @@ echo '#############'
 
 sudo apt install libx11-dev libxinerama-dev libxft-dev libpam0g-dev libxcb-xkb-dev 2> ~/libx_err.txt
 
-
-echo "######################"
-echo "# LY Display manager #"
-echo "######################"
+quit
 
 cd ~
 if [ ! -d .config/ ]; then
   sudo mkdir .config/
 fi
-cd .config/
-git clone https://github.com/fairyglade/ly
-cd ~
 
 echo "################"
 echo "# DWM suckless #"
@@ -66,6 +59,8 @@ cd ~/.config/
 git clone https://git.suckless.org/dwm
 git clone https://git.suckless.org/dmenu
 cd ~
+
+quit
 
 echo "###################"
 echo "# FotografieTools #"
