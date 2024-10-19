@@ -1,11 +1,11 @@
 #!/bin/bash
 
-quit () {
-  read -p "Abort? Y/N" antw
-  if [ $atnw = 'y' ] || [ $antw = 'Y' ]; then
-	  exit 1
-  fi
-} 
+# quit () {
+#   read -p "Abort? Y/N" antw
+#   if [ $atnw = 'y' ] || [ $antw = 'Y' ]; then
+# 	  exit 1
+#   fi
+# } 
 
 
 sudo apt update && sudo apt upgrade
@@ -44,21 +44,11 @@ echo '#############'
 
 sudo apt install libx11-dev libxinerama-dev libxft-dev libpam0g-dev libxcb-xkb-dev 2> ~/libx_err.txt
 
-quit
 
 cd ~
 if [ ! -d .config/ ]; then
   sudo mkdir .config/
 fi
-
-echo "################"
-echo "# DWM suckless #"
-echo "################"
-
-cd ~/.config/
-git clone https://git.suckless.org/dwm
-git clone https://git.suckless.org/dmenu
-cd ~
 
 quit
 
