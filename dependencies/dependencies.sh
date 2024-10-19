@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# quit () {
-#   read -p "Abort? Y/N" antw
-#   if [ $atnw = 'y' ] || [ $antw = 'Y' ]; then
-# 	  exit 1
-#   fi
-# } 
+quit () {
+  read -p "Abort? Y/N" antw
+  if [ $atnw = 'y' ] || [ $antw = 'Y' ]; then
+	  exit 1
+  fi
+} 
 
 
 sudo apt update && sudo apt upgrade
