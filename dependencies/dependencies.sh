@@ -16,7 +16,15 @@ echo "###############"
 echo "# basic Utils #"
 echo "###############"
 
-sudo apt install git build-essential make kitty firefox-esr pipewire python3 nmap tldr net-tools ntfs-3g keepassxc 2> ~/utils_err.txt
+sudo apt -y install kitty firefox-esr nmap tldr ntfs-3g keepassxc
+
+sudo apt -y install network-manager net-tools
+
+sudo apt -y install make gcc build-essential pipewire
+
+sudo apt -y install python3
+
+sudo apt -y install jmtpfs exfat-fuse
 
 echo "======================================"
 echo "|| Flatpak package manager install? ||"
