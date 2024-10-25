@@ -20,7 +20,7 @@ sudo apt -y install kitty firefox-esr nmap tldr ntfs-3g keepassxc
 
 sudo apt -y install network-manager net-tools
 
-sudo apt -y install make gcc build-essential pipewire
+sudo apt -y install make gcc build-essential curl pipewire
 
 sudo apt -y install python3
 
@@ -38,6 +38,17 @@ if [ $fp = "y" ] || [ $fp = "Y" ]; then
   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 fi
 
+
+
+echo "==================="
+echo "|| Rust install? ||"
+echo "==================="
+echo; echo
+read -p "Y/N?" fp
+
+if [ $fp = "y" ] || [ $fp = "Y" ]; then
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
 
 echo "###################"
 echo "# X11 xserver etc.#"
