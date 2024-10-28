@@ -6,4 +6,5 @@ Post installation scripts en configs voor snelle setup
 #### __TO DO LIST:__
 - Foto-script
   - flatpak
+- Durdiraw
 - Python interface(?)
