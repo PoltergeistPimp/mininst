@@ -22,7 +22,7 @@ sudo apt -y install network-manager net-tools
 
 sudo apt -y install make gcc build-essential curl pipewire
 
-sudo apt -y install python3
+sudo apt -y install python3 python3-pip
 
 sudo apt -y install jmtpfs exfat-fuse
 
@@ -34,7 +34,7 @@ read -p "Y/N?" fp
 
 if [ $fp = "y" ] || [ $fp = "Y" ]; then
   fp=1
-  sudo apt install flatpack
+  sudo apt -y install flatpak
   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 fi
 
@@ -55,7 +55,7 @@ echo "# X11 xserver etc.#"
 echo "###################"
 
 
-sudo apt install xserver-xorg-core xserver-xorg-video-intel xinit xinput x11-xserver-utils 2> ~/x11_err.txt
+sudo apt -y install xserver-xorg-core xserver-xorg-video-intel xinit xinput x11-xserver-utils 2> ~/x11_err.txt
 
 echo '#############'
 echo '# LibX etc. #'
