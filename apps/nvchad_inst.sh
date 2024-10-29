@@ -14,7 +14,7 @@ sudo mv nvim.appimage /usr/local/bin/nvim
 cd ~/.config/
 
 # NvChad setup
-git clone https://github.com/NvChad/starter ~/.config/nvim
+sudo git clone https://github.com/NvChad/starter ~/.config/nvim
 
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 echo "! Laat alles laden na openen nvim !"
