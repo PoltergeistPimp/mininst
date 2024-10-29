@@ -69,7 +69,3 @@ cd ~
 if [ ! -d .config/ ]; then
   sudo mkdir .config/
 fi
-
-quit
-
-
