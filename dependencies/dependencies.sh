@@ -34,14 +34,12 @@ echo; echo
 read -p "Y/N?" fp
 
 if [ $fp = "y" ] || [ $fp = "Y" ]; then
- 
   sudo apt install extrepo -y
-
   sudo extrepo enable librewolf
-
   sudo apt update 
   sudo apt install librewolf -y
 fi
+
 echo "======================================"
 echo "|| Flatpak package manager install? ||"
 echo "======================================"
