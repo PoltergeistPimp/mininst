@@ -27,6 +27,21 @@ sudo apt -y install python3 python3-pip
 sudo apt -y install jmtpfs exfat-fuse
 sudo mkdir /media/phone/
 
+echo "================================"
+echo "|| LibreWolf Browser install? ||"
+echo "================================"
+echo; echo
+read -p "Y/N?" fp
+
+if [ $fp = "y" ] || [ $fp = "Y" ]; then
+ 
+  sudo apt install extrepo -y
+
+  sudo extrepo enable librewolf
+
+  sudo apt update 
+  sudo apt install librewolf -y
+fi
 echo "======================================"
 echo "|| Flatpak package manager install? ||"
 echo "======================================"
