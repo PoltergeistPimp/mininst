@@ -19,5 +19,12 @@ sudo apt-get update
 # Install latest docker version:
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+# Post install (docker as non-root)
+sudo groupadd docker
+
+sudo usermod -aG docker $USER 
+
+newgrp docker
+
 # Test latest docker install:
 sudo docker run hello-world
