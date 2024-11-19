@@ -5,9 +5,9 @@ static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 2;        /* 2 is the default spacing around the bar's font */
+static const int user_bh            = 4;        /* 2 is the default spacing around the bar's font */
 static const char *fonts[]          = { "GeistMonoNerdFontMono-Light:size=11" };
-static const char dmenufont[]       = "GeistMonoNerdFontMono-Regular:size=13";
+static const char dmenufont[]       = "GeistMonoNerdFontMono-Regular:size=15";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -27,17 +27,22 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "󰄀" };
+static const char *tags[] = { "", "", "", "4", "5", "6", "7", "8", "󰄀" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       1 << 8,            0,           -1 },
-	{ "Firefox",  NULL,       NULL,       0,                 0,           -1 },
-};
+	/* class          instance    title       tags mask     isfloating   monitor */
+	{ "Gimp",         NULL,       NULL,       1 << 8,            0,           -1 },
+	{ "firefox-esr",  NULL,       NULL,       1 << 1,            0,            1 },
+  { "Shotwell",     NULL,       NULL,       1 << 8,            0,           -1 },
+  { "Darktable",    NULL,       NULL,       1 << 8,            0,           -1 },
+  { "pwvucontol",   NULL,       NULL,       1 << 2,            1,           -1 },
+  { "LibreWolf",    NULL,       NULL,       1 << 1,            0,           -1 },
+  { "keepassxc",    NULL,       NULL,       1 << 1,            0,           -1 },
+};  
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
