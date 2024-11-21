@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=dwm
+Comment=Window manager
+Exec=/usr/local/bin/dwm
+Type=XSession
+
+[X-Window Manager]
+SessionsManaged=true
