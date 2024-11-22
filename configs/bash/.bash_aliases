@@ -14,6 +14,8 @@ alias c='cd ~/.config/'
 alias bashrc='nvim ~/.bashrc'
 alias bashali='nvim ~/.bash_aliases'
 
+alias wacom="./home/poltergeist/hulp/wacomsetup.sh"
+
 # DWM
 alias makedwm='sudo make && sudo make clean install'
 alias confmake='sudo rm config.h && sudo make && sudo make clean install'
