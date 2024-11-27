@@ -24,8 +24,9 @@ sudo apt -y install make gcc build-essential curl pipewire
 
 sudo apt -y install python3-full python3-pip pipx
 
-sudo apt -y install jmtpfs exfat-fuse
+sudo apt -y install jmtpfs exfat-fuse setserial
 sudo mkdir /media/phone/
+sudo mkdir /media/hdd/
 
 echo "================================"
 echo "|| LibreWolf Browser install? ||"
