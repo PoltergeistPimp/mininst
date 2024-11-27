@@ -22,7 +22,7 @@ sudo apt -y install network-manager net-tools
 
 sudo apt -y install make gcc build-essential curl pipewire
 
-sudo apt -y install python3 python3-pip
+sudo apt -y install python3-full python3-pip pipx
 
 sudo apt -y install jmtpfs exfat-fuse
 sudo mkdir /media/phone/
