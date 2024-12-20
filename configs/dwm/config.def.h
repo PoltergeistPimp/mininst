@@ -35,13 +35,19 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class          instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",         NULL,       NULL,       1 << 8,            0,           -1 },
-	{ "firefox-esr",  NULL,       NULL,       1 << 1,            0,            1 },
-  { "Shotwell",     NULL,       NULL,       1 << 8,            0,           -1 },
-  { "Darktable",    NULL,       NULL,       1 << 8,            0,           -1 },
-  { "pwvucontol",   NULL,       NULL,       1 << 2,            1,           -1 },
+    /* creatieve apps */
+  { "Gimp",         NULL,       NULL,       1 << 8,            0,            0 },
+  { "Shotwell",     NULL,       NULL,       1 << 8,            0,            1 },
+  { "Darktable",    NULL,       NULL,       1 << 8,            0,            1 },
+  { "krita",        NULL,       NULL,       1 << 8,            0,            0 },
+  { "Inkscape",     NULL,       NULL,       1 << 8,            0,           -1 },
+	  /* browsers */
+  { "firefox-esr",  NULL,       NULL,       1 << 1,            0,            1 },
   { "LibreWolf",    NULL,       NULL,       1 << 1,            0,           -1 },
-  { "keepassxc",    NULL,       NULL,       1 << 1,            0,           -1 },
+    /* overige apps */
+  { "KeePassXC",    NULL,       NULL,       1 << 1,            0,           -1 },
+  { "Signal",       NULL,       NULL,       1 << 4,            0,            1 },
+  { "pwvucontol",   NULL,       NULL,       1 << 2,            1,           -1 },
 };  
 
 /* layout(s) */
