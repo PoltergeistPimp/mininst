@@ -1,0 +1,8 @@
+# bash startup
+/etc/init.d/
+
+# x desktop files
+/usr/share/xsessions/dwm.desktop
+
+# fonts
+/usr/share/fonts/

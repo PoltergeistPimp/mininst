@@ -1,0 +1,17 @@
+# Dual monitor setup
+xrandr --output HDMI-1 --primary --mode 2560x1440 --rate 60.00 && --output DVI-D-1 --mode 1920x1080 --rate 60.00 --left-of HDMI-1
+
+# Dual monitor on startup bash
+/bin/bash -c "sleep 15 && xrandr --output HDMI-1 --primary --mode 2560x1440 --rate 60.00 && --output DVI-D-1 --mode 1920x1080 --rate 60.00 --left-of HDMI-1"
+
+# externe disks zoeken
+sudo fdisk -l
+
+# externe disk mount (exfat disk)
+sudo mount -t exfat /dev/(device) /media/(device)
+
+# gsm mount
+jmtpfs /media/phone/
+
+#gsm unmount
+fusermount -u /media/phone/
