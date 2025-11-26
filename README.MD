@@ -7,3 +7,10 @@ Post installation scripts en configs voor snelle setup
 - Durdiraw
 - TUI interface
 - Signal flatpak
+- Davinci Resolve
+- Startup script
+
+#### __FIX LIST:__
+- Yazi
+- Dependencies.sh
+
