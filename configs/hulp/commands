@@ -4,6 +4,9 @@ xrandr --output HDMI-1 --primary --mode 2560x1440 --rate 60.00 && --output DVI-D
 # Dual monitor on startup bash
 /bin/bash -c "sleep 15 && xrandr --output HDMI-1 --primary --mode 2560x1440 --rate 60.00 && --output DVI-D-1 --mode 1920x1080 --rate 60.00 --left-of HDMI-1"
 
+# PC batterij weergeven
+acpi
+
 # externe disks zoeken
 sudo fdisk -l
 
@@ -15,3 +18,26 @@ jmtpfs /media/phone/
 
 #gsm unmount
 fusermount -u /media/phone/
+
+
+# Fotografie
+#--- diff & find ---#
+## vergelijk mappen voor missende foto's 
+diff -bur [INSERT_PATH1] [INSERT_PATH2]
+
+## vergelijk mappen met specifieke data
+find [INSERT_PATH1] -type f -iname "*.JPG" -newermt "jan 1 2000" ! -newermt "dec 31 2000" -exec diff -bqr /media/hdd/creatief/Foto/OLYMPUS/2024 /media/sd/DCIM/100OLYMP/ \;
+
+#--- find ---#
+## foto's dit jaar in ls -l vorm (template)
+sudo find [INSERT_PATH] -type f -iname "*.JPG"  -newermt "jan 1" -ls
+
+## foto's van dit jaar kopiëren
+sudo find /media/sd/DCIM/100OLYMP/ -type f -iname "*.JPG"  -newermt "jan 1" -exec cp {} /media/hdd/creatief/Foto/OLYMPUS/[INSERT_DATUM]/ \;
+
+## foto's van specifieke range weergeven
+find /media/sd/DCIM/100OLYMP/ -iname "*.JPG" -newermt "jan 1 2024" ! -newermt "dec 31 2024"
+
+## foto's van specifieke range weergeven
+sudo find [PATH] -type f -iname "*.JPG" -newermt "jan 1 2000" ! -newermt "dec 31 2000 " -exec cp {} [PATH]
+

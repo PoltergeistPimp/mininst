@@ -6,3 +6,10 @@
 
 # fonts
 /usr/share/fonts/
+
+# .appimage files
+/usr/local/bin/[naam]/[naam].appimage
+
+# curl repo locations
+/etc/apt/sources.list.d/
+
